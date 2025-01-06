@@ -64,7 +64,7 @@ class AccountStorageService(
     }
 
     override fun findByEmail(email: String): Account? {
-        return repository.findByEmail(email)?.convert()
+        return repository.findOneByEmail(email)?.convert()
     }
 
     fun getInfo(id: Long): AccountInfo? {
